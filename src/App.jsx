@@ -1,4 +1,5 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
+import Navbar from "./components/navbar";
 
 function App() {
   //show hides ? layout making
@@ -9,9 +10,9 @@ function App() {
         lg: `"nav nav" "side main"`,
       }}
     >
-      <GridItem area="nav" bg="coral">
+      <GridItem area="nav">
         {" "}
-        Nav
+        <Navbar />
       </GridItem>
       <Show above="lg">
         <GridItem area="side" bg="red.400">
