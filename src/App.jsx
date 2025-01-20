@@ -1,29 +1,18 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import React from "react";
 import Navbar from "./components/navbar";
+import "./index.css";
 
 function App() {
-  //show hides ? layout making
   return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "side main"`,
-      }}
-    >
-      <GridItem area="nav">
-        {" "}
+    <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] grid-rows-[auto_1fr]">
+      <div className="col-span-1 lg:col-span-2">
         <Navbar />
-      </GridItem>
-      <Show above="lg">
-        <GridItem area="side" bg="red.400">
-          {" "}
-          side
-        </GridItem>
-      </Show>
-      <GridItem area="main" bg="dodgerblue">
-        Main
-      </GridItem>
-    </Grid>
+      </div>
+
+      <div className="hidden lg:block bg-red-400">side</div>
+
+      <div className="bg-blue-500">Main</div>
+    </div>
   );
 }
 

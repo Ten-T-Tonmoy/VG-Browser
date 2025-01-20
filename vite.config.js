@@ -1,12 +1,18 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import path from "path"; // Import path module
+import { fileURLToPath, URL } from "url";
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"), // Define '@' as an alias for 'src'
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
+  },
+  server: {
+    port: 3000,
+  },
+  preview: {
+    port: 3000,
   },
 });

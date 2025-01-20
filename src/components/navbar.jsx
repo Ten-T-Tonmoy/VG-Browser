@@ -1,13 +1,11 @@
-import { HStack, Image, Text } from "@chakra-ui/react";
 import logo from "../assets/logo.webp";
+
 const Navbar = () => {
   return (
-    <>
-      <HStack>
-        <Image src={logo} boxSize="50px"></Image>
-        <Text color="red.500">Topbar Beatch</Text>
-      </HStack>
-    </>
+    <div className="flex flex-row items-center">
+      <img src={logo} alt="Logo" className="w-[50px] h-[50px]" />
+      <p className="text-red-500">Topbar Beatch</p>
+    </div>
   );
 };
 
