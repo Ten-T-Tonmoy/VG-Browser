@@ -1,0 +1,40 @@
+import React from "react";
+import { useState, useEffect } from "react";
+
+const DarkModeSwitch = () => {
+  const [dark, setDark] = useState(false);
+  useEffect(() => {
+    if (dark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [dark]);
+  return (
+    <div>
+      <label className="flex items-center cursor-pointer">
+        <input
+          type="checkbox"
+          checked={dark}
+          onChange={() => setDark(!dark)}
+          className="hidden"
+        />
+        {/**Now for the design on toggle switch */}
+        <div
+          className={`w-10 h-6 flex 
+            items-center bg-gray-300 dark:bg-gray-600 
+            rounded-full p-1 duration-300`}
+        >
+          <div
+            className={`bg-white w-4 h-4 rounded-full
+            shadow-md transform duration-300 ${
+              dark ? "translate-x-4 bg-gray-800" : ""
+            } `}
+          ></div>
+        </div>
+      </label>
+    </div>
+  );
+};
+
+export default DarkModeSwitch;

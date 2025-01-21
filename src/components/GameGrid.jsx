@@ -12,6 +12,7 @@ const GameGrid = () => {
         {games.map((game) => (
           <Gcards key={game.id} game={game} />
         ))}
+        
       </div>
     </>
   );

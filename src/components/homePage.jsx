@@ -8,9 +8,9 @@ function Home() {
         <Navbar />
       </div>
 
-      <div className="hidden lg:block bg-red-400">side</div>
+      <div className="hidden lg:block bg-red-400 dark:bg-gray-600">side</div>
 
-      <div className="bg-gray-200">
+      <div className="bg-gray-200 dark:bg-gray-800">
         <GameGrid />
       </div>
     </div>
