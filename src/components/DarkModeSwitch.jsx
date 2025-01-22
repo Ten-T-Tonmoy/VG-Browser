@@ -26,9 +26,9 @@ const DarkModeSwitch = () => {
             rounded-full p-1 duration-300`}
         >
           <div
-            className={`bg-white w-4 h-4 rounded-full
+            className={` w-4 h-4 rounded-full
             shadow-md transform duration-300 ${
-              dark ? "translate-x-4 bg-gray-800" : ""
+              dark ? "translate-x-4 bg-gray-800" : "bg-white"
             } `}
           ></div>
         </div>
