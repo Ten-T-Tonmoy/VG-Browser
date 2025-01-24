@@ -5,7 +5,7 @@ import croppedUrl from "../services/imageUrl";
 const Gcards = ({ game }) => {
   return (
     <div
-      className=" w-[360px] bg-gray-100 cursor-pointer
+      className=" w-auto bg-gray-100 cursor-pointer
       hover:bg-gray-300 ease-in-out duration-200 dark:hover:bg-gray-700  dark:bg-gray-800 shadow-lg
     rounded-md "
     >
@@ -14,6 +14,10 @@ const Gcards = ({ game }) => {
         src={croppedUrl(game.background_image)}
         alt=""
       />
+      <div className="flex mx-3 justify-between">
+        <PlatIcons game={game} />
+        <CriticScore game={game} />
+      </div>
       <div>
         <div
           className="flex font-mono my-2 font-bold 
@@ -21,8 +25,6 @@ const Gcards = ({ game }) => {
         >
           {game.name}
         </div>
-        <CriticScore game={game} />
-        <PlatIcons game={game} />
       </div>
     </div>
   );

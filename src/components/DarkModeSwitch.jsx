@@ -6,6 +6,7 @@ const DarkModeSwitch = () => {
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add("dark");
+      //accesses the root html so yea
     } else {
       document.documentElement.classList.remove("dark");
     }
