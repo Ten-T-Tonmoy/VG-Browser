@@ -7,10 +7,10 @@ const Gcards = ({ game }) => {
     <div
       className=" w-auto bg-gray-100 cursor-pointer
       hover:bg-gray-300 ease-in-out duration-200 dark:hover:bg-gray-700  dark:bg-gray-800 shadow-lg
-    rounded-md "
+    rounded-md lg:max-w-[320px]"
     >
       <img
-        className="rounded-md"
+        className="rounded-md "
         src={croppedUrl(game.background_image)}
         alt=""
       />

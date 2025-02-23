@@ -13,7 +13,7 @@ const DarkModeSwitch = () => {
   }, [dark]);
   return (
     <div>
-      <label className="flex items-center cursor-pointer">
+      <label className="flex hidden sm:block  items-center cursor-pointer">
         <input
           type="checkbox"
           checked={dark}
