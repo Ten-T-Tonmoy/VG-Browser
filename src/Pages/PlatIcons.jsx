@@ -9,6 +9,7 @@ import {
 import { SiNintendo } from "react-icons/si";
 import { MdPhoneIphone } from "react-icons/md";
 import { BsGlobe } from "react-icons/bs";
+
 const PlatIcons = ({ game }) => {
   //slug equivalent of id of image?
   const platformIcons = {

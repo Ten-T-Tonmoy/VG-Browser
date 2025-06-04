@@ -11,7 +11,7 @@ rounded-md lg:max-w-[320px] "
       <div className="flex mx-3 justify-between">Scores and icons </div>
       <div>
         <div
-          className="flex font-mono my-2 font-bold 
+          className="flex  my-2 font-bold 
     text-[30px] dark:text-white text-center justify-center"
         >
           Game Name

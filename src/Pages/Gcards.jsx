@@ -16,7 +16,7 @@ const Gcards = ({ game }) => {
       </div>
       <div>
         <div
-          className="flex font-mono my-2 font-bold 
+          className="flex  my-2 font-bold 
         text-[30px] dark:text-white text-center justify-center"
         >
           {game.name}

@@ -5,23 +5,27 @@ import croppedUrl from "../services/imageUrl";
 const Genres = ({ gen, handleGenre }) => {
   const { genres, err } = useGenre();
 
+  //adjust pb on necessary
   return (
-    <div className="mt-14 text-[17px] ease-in-out duration-200">
-      <h1>Genres</h1>
+    <div
+      className="text-[.9rem] ease-in-out dark:text-gray-300 duration-200 h-[100vh] overflow-y-auto
+     hidden lg:block shadow-lg dark:shadow-gray-200/15 no-scrollbar
+      border-r mr-2 dark:border-gray-400/20 border-gray-500/10 pb-20 "
+    >
       {genres.map((genre) => (
         <div
           onClick={() => handleGenre(genre.name)}
-          className="flex dark:hover:bg-gray-700 hover:bg-gray-300 rounded-md cursor-pointer m-1 p-1"
+          className="flex items-center gap-2 border dark:border-gray-400/20 border-gray-500/10
+           dark:hover:bg-gray-700 hover:bg-gray-300 rounded-md 
+           cursor-pointer m-1 p-1"
           key={genre.id}
         >
           <img
-            className="w-12 rounded-full h-12"
+            className="w-10 rounded-full h-10"
             src={croppedUrl(genre.image_background)}
             alt=""
           />
-          <div className="dark:text-white font-mono relative top-3 mx-2">
-            {genre.name}
-          </div>
+          <div className="">{genre.name}</div>
         </div>
       ))}
     </div>

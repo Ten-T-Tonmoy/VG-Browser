@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/navbar";
 import GameGrid from "./GameGrid";
 import Genres from "./Genres";
 function Home() {
@@ -9,17 +8,17 @@ function Home() {
 
   return (
     <div
-      className="grid pt-20 grid-cols-1 lg:grid-cols-[220px_1fr] dark:bg-gray-900
-     bg-gray-200grid-rows-[auto_1fr]"
+      className="grid h-screen pt-20 grid-cols-1 overflow-y-hidden
+        lg:grid-cols-[220px_1fr] dark:bg-gray-900
+      bg-gray-200grid-rows-[auto_1fr] "
     >
-      <div className="hidden  lg:block shadow-lg  ">
-        <Genres
-          gen={query.genre}
-          handleGenre={(genre) => setQuery({ ...query, genre })}
-        />
-      </div>
+      <Genres
+        gen={query.genre}
+        handleGenre={(genre) => setQuery({ ...query, genre })}
+      />
 
-      <div className="bg-gray-200 dark:bg-gray-900">
+      {/**adjust pb on necessary */}
+      <div className="overflow-y-auto pb-20 dark-sidebar">
         <GameGrid />
       </div>
     </div>

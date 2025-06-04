@@ -16,7 +16,7 @@ const PlatSelect = ({ selected, platSelected }) => {
         }}
         className="
        bg-gray-100 shadow-lg dark:bg-slate-700  mx-4 w-auto text-center 
-       dark:text-white font-mono p-2 rounded-md text-[1.1rem]"
+       dark:text-white  p-2 rounded-md text-[1.1rem]"
       >
         <option value="default">Platforms</option>
         {plats.map((plat) => (

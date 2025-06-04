@@ -32,7 +32,7 @@ const GameGrid = () => {
       {err && <h1>{err}</h1>}
       <div
         className="grid mt-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
-      gap-4 justify-items-center m-2"
+      gap-4 justify-items-center py-2 px-6 sm:px-2"
       >
         {loading && skeletons.map((skel) => <GcardSkeleton key={skel} />)}
         {filteredGames?.map((game) => (
