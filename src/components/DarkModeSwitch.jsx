@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const DarkModeSwitch = () => {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add("dark");
@@ -13,14 +13,14 @@ const DarkModeSwitch = () => {
   }, [dark]);
   return (
     <div>
-      <label className="flex hidden sm:block  items-center cursor-pointer">
+      <label className="md:flex hidden justify-center items-center cursor-pointer">
         <input
           type="checkbox"
           checked={dark}
           onChange={() => setDark(!dark)}
           className="hidden"
         />
-        {/**Now for the design on toggle switch */}
+        {/**  toggle switch */}
         <div
           className={`w-10 h-6 flex 
             items-center bg-gray-300 dark:bg-gray-600 

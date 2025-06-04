@@ -24,9 +24,12 @@ const PlatIcons = ({ game }) => {
   };
 
   return (
-    <div className="text-center dark:text-gray-400 text-gray-700 flex flex-row justify-center">
+    <div
+      className="text-center dark:text-gray-400 text-gray-700 flex
+    flex-wrap justify-center py-4"
+    >
       {game.parent_platforms.map(({ platform }) => (
-        <div key={platform.id} className="mx-1  my-5  text-[1.3rem]">
+        <div key={platform.id} className="p-1 text-[1.3rem]">
           {platformIcons[platform.name]}
         </div>
       ))}

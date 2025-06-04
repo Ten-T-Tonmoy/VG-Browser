@@ -16,6 +16,7 @@ const useGames = () => {
       .then((res) => {
         setLoading(false);
         setGames(res.data.results);
+        console.log(games);
         setErr("");
       })
       .catch((err) => {
@@ -26,7 +27,7 @@ const useGames = () => {
 
     return () => controller.abort();
   }, []);
-  return { games, err };
+  return { games, err, loading };
 };
 
 export default useGames;

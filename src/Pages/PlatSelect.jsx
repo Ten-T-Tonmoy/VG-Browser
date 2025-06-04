@@ -1,5 +1,6 @@
 import React from "react";
 import usePlatform from "../hooks/usePlatform";
+
 const PlatSelect = ({ selected, platSelected }) => {
   const { plats, err } = usePlatform();
   if (err) return null;
@@ -14,7 +15,7 @@ const PlatSelect = ({ selected, platSelected }) => {
           platSelected(selected);
         }}
         className="
-       bg-gray-100 shadow-lg dark:bg-slate-700 mt-14 mx-4 w-auto text-center 
+       bg-gray-100 shadow-lg dark:bg-slate-700  mx-4 w-auto text-center 
        dark:text-white font-mono p-2 rounded-md text-[1.1rem]"
       >
         <option value="default">Platforms</option>

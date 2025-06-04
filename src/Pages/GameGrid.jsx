@@ -12,13 +12,22 @@ const GameGrid = () => {
 
   const [selectplat, setSelectPlat] = useState(null);
   const { games, err, loading } = useGames();
-  console.log(games);
+  // console.log(games);
+
   const filteredGames = selectplat
-    ? games.filter((game) => game.platform === selectplat.id)
+    ? games.filter((game) =>
+        game.platforms.some((p) =>
+          p.platform.name.toLowerCase().includes(selectplat.name.toLowerCase())
+        )
+      )
     : games;
+
   return (
     <>
-      <PlatSelect platSelected={setSelectPlat} selected={selectplat} />
+      <PlatSelect
+        platSelected={(e) => setSelectPlat(e)}
+        selected={selectplat}
+      />
 
       {err && <h1>{err}</h1>}
       <div

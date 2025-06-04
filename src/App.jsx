@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import Home from "./components/homePage";
+import Home from "./pages/Home";
+import Navbar from "./components/navbar";
+
 const App = () => {
-   return (
+  return (
     <>
+      <Navbar />
       <Home />
     </>
   );

@@ -16,6 +16,7 @@ const usePlatform = () => {
       .then((res) => {
         setLoading(false);
         setPlats(res.data.results);
+        console.log(plats);
         setErr("");
       })
       .catch((err) => {
