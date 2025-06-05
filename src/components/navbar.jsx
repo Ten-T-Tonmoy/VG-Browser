@@ -20,7 +20,7 @@ const Navbar = () => {
       backdrop-blur-md bg-white/30 dark:bg-black/20 border-b border-white/20 dark:border-black/30 shadow-lg"
     >
       <img src={logo} alt="Logo" className="w-[66px]  h-[66px] " />
-      <div className=" items-center justify-end w-full md:w-[65%] lg:w-[50%] flex gap-2  py-3 sm:px-8">
+      <div className="relative items-center justify-end w-[80%] md:w-[60%] lg:w-[50%] flex gap-2  py-3 sm:px-8">
         <input
           type="text"
           placeholder="Search for games ..."
@@ -30,7 +30,8 @@ const Navbar = () => {
         />
         <FaSearch
           className="text-gray-200  h-[45px] cursor-pointer w-[45px] rounded-full p-[6px] 
-      bg-gradient-to-r  from-red-600 hover:opacity-80 duration-200 transition-all hover:scale-110
+      bg-gradient-to-r  from-red-600 hover:opacity-80 duration-200 transition-all
+       hover:scale-110 absolute right-12 sm:right-20
        to-violet-600"
         />
 

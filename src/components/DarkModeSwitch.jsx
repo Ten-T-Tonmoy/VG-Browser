@@ -13,7 +13,7 @@ const DarkModeSwitch = () => {
   }, [dark]);
   return (
     <div>
-      <label className="md:flex hidden justify-center items-center cursor-pointer">
+      <label className="md:flex  justify-center items-center cursor-pointer">
         <input
           type="checkbox"
           checked={dark}

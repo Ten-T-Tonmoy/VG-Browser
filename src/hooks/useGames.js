@@ -16,6 +16,7 @@ const useGames = () => {
       .then((res) => {
         setLoading(false);
         setGames(res.data.results);
+
         console.log(games);
         setErr("");
       })
