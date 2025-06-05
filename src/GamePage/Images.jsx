@@ -11,7 +11,7 @@ const Images = ({ game }) => {
       <img
         src={game.background_image_additional}
         alt=""
-        className="h-full justify-self-center  rounded-md w-[93%] md:w-[90%]"
+        className="h-full justify-self-center  rounded-md w-[93%] md:w-[95%]"
       />
     </div>
   );

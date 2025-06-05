@@ -10,11 +10,8 @@ const useElement = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
- 
-
   useEffect(() => {
     const controller = new AbortController();
- 
 
     setLoading(true);
     apiClient

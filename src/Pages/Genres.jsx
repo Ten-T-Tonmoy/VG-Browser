@@ -16,16 +16,16 @@ const Genres = ({ gen, handleGenre }) => {
         <div
           onClick={() => handleGenre(genre.name)}
           className="flex items-center gap-2 border dark:border-gray-400/20 border-gray-500/10
-           dark:hover:bg-gray-700 hover:bg-gray-300 rounded-md 
-           cursor-pointer m-1 p-1"
+           dark:hover:bg-gray-700 hover:bg-gray-300 rounded-sm 
+           cursor-pointer m-1 "
           key={genre.id}
         >
           <img
-            className="w-10 rounded-full h-10"
+            className="w-9 rounded-sm h-9"
             src={croppedUrl(genre.image_background)}
             alt=""
           />
-          <div className="">{genre.name}</div>
+          <div className="px-2">{genre.name}</div>
         </div>
       ))}
     </div>

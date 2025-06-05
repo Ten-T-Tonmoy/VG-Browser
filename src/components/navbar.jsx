@@ -29,9 +29,9 @@ const Navbar = () => {
          text-gray-900 dark:text-gray-300 dark:bg-gray-600 rounded-3xl shadow-md w-[85%] sm:w-[70%] "
         />
         <FaSearch
-          className="text-gray-200  h-[45px] cursor-pointer w-[45px] rounded-full p-[6px] 
-      bg-gradient-to-r  from-red-600 hover:opacity-80 duration-200 transition-all
-       hover:scale-110 absolute right-12 sm:right-20
+          className="text-gray-200  h-[45px] cursor-pointer w-[45px] rounded-full p-[8px] sm:p-[6px] 
+      sm:bg-gradient-to-r  from-red-600 hover:opacity-80 duration-200 transition-all
+       hover:scale-110 absolute right-12 sm:right-20 bg-none
        to-violet-600"
         />
 
